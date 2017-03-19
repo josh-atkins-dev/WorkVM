@@ -3,7 +3,7 @@
 
 Vagrant.configure(2) do |config|
   
-  config.vm.box = "base"
+  config.vm.box = "debian/jessie64"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
