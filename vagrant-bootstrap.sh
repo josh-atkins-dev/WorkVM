@@ -8,7 +8,7 @@ echo "Installing Ansible..."
 apt-get install -y ansible
 
 ansible-galaxy install kbrebanov.openvpn
-ansible-galaxy install angstwad.docker_ubuntu
+# ansible-galaxy install angstwad.docker_ubuntu
 
 wget -O - https://bootstrap.pypa.io/get-pip.py | python
 pip install boto virtualenv awscli
