@@ -17,7 +17,17 @@ Vagrant.configure(2) do |config|
     dev.vm.network "private_network", ip: "10.100.103.120"
     dev.vm.network "forwarded_port", guest: 8080, host: 8080
 
+    dev.vm.provision "shell", path: "vagrant-bootstrap.sh"
 
+    dev.vm.provision "credentials", type: "shell" do |s|
+      s.path = "vagrant-credentials.sh"
+      s.env = {
+        "aws_access_key_id" => "awskeyid",
+        "aws_secret_access_key" => "awskey"
+      }
+    end
+
+    
 
   end
 
