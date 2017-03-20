@@ -5,3 +5,5 @@ Personal virtual machine providing a consistent development environment on any u
 > git clone https://github.com/josh-atkins-dev/WorkVM.git
 > vagrant up
 ```
+## Prerequisites
+- VirtualBox version 5.1.18 (`VBoxManage --version`)
