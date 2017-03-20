@@ -4,7 +4,6 @@
 Vagrant.configure(2) do |config|
 
   config.vm.box = "debian/contrib-jessie64"
-  
 
   config.vm.synced_folder "./", "/vagrant"
 
@@ -13,4 +12,5 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision :shell, path: "vagrant-bootstrap.sh"
+  
 end
