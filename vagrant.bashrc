@@ -12,11 +12,20 @@ cd /vagrant
 
 alias e="exit"
 alias r=". /home/vagrant/.bashrc"
+alias pf="pip freeze"
+
+
+
 alias g="git status"
 alias ga="git add"
 alias gc="git commit"
 alias gd="git diff"
-alias pf="pip freeze"
+alias gr="git reflog"
+alias gl="git log"
+alias go="git log --oneline"
+alias gv="git log --graph --decorate --oneline --all"
+alias gk="git checkout"
+alias gb="git branch"
 
 
 
