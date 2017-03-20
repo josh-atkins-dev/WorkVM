@@ -1,7 +1,9 @@
 #!/bin/bash
 
 apt-get update
-apt-get install fortune
+apt-get install -y \
+  fortune \
+  git 
 
-bashrc=$(cat /vagrant/home/.bashrc)
-grep -q -F '. /vagrant/vagrant.bashrc' /vagrant/home/.bashrc || echo -en ". /vagrant/vagrant.bashrc\n$bashrc" >/vagrant/home/.bashrc
+bashrc=$(cat /home/vagrant/.bashrc)
+grep -q -F '. /vagrant/vagrant.bashrc' /home/vagrant/.bashrc || echo -en ". /vagrant/vagrant.bashrc\n$bashrc" >/home/vagrant/.bashrc
