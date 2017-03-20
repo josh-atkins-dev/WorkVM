@@ -12,7 +12,7 @@ ansible-galaxy install kbrebanov.openvpn
 
 
 echo "Installing Docker..."
-apt-get install apt-transport-https ca-certificates curl software-properties-common
+apt-get install -y apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 apt-key fingerprint | grep "4096R/F273FCD8 2017-02-22" || exit
 add-apt-repository \
