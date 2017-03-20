@@ -11,7 +11,13 @@ Vagrant.configure(2) do |config|
     vb.memory = "1024"
   end
 
-  config.vm.provision :shell, path: "vagrant-bootstrap.sh"
+
+  config.vm.define :dev do |dev|
+
+    config.vm.provision :shell, path: "vagrant-bootstrap.sh"
+    
+  end
+
 
   if Vagrant.has_plugin?("vagrant-cachier")
     config.cache.scope = :box
