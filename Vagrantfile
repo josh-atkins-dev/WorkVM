@@ -22,11 +22,11 @@ Vagrant.configure(2) do |config|
     dev.vm.provision "credentials", type: "shell" do |s|
       s.path = "vagrant-credentials.sh"
       s.env = {
-        "aws_access_key_id" => "access_key_id",
-        "aws_secret_access_key" => "access_key",
-        "ANSIBLE_CONFIG" => "config_dir",
-        "AWS_DEFAULT_REGION" => "region",
-        "AWS_PREFIX" => "prefix"
+        "aws_access_key_id" => ENV['aws_access_key_id'],
+        "aws_secret_access_key" => ENV['aws_secret_access_key'],
+        "ANSIBLE_CONFIG" => ENV['ANSIBLE_CONFIG'],
+        "AWS_DEFAULT_REGION" => ENV['AWS_DEFAULT_REGION'],
+        "AWS_PREFIX" => ENV['AWS_PREFIX']
       }
     end
 
