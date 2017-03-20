@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-apt-get install -y fortune git software-properties-common
+apt-get install -y fortune git ntp software-properties-common
 apt-get update
 
 echo "Installing Ansible..."
