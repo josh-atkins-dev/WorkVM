@@ -4,8 +4,8 @@ Personal virtual machine providing a consistent development environment on any u
 Set the following variables on your host machine on the first `vagrant up` or any provision:
 
 ```
-export aws_access_key_id=
-export aws_secret_access_key=
+export AWS_ACCESS_KEY_ID=
+export AWS_SECRET_ACCESS_KEY=
 export ANSIBLE_CONFIG=
 export AWS_DEFAULT_REGION=
 export AWS_PREFIX=
