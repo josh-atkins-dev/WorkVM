@@ -5,14 +5,17 @@
 
 export TERM=xterm
 
-
+cd /vagrant
 #-------------------------------------------------------------
 # Aliases
 #-------------------------------------------------------------
 
 alias e="exit"
 alias r=". /home/vagrant/.bashrc"
-alias g="git"
+alias g="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gd="git diff"
 alias pf="pip freeze"
 
 
