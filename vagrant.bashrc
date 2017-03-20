@@ -11,6 +11,8 @@ export TERM=xterm
 #-------------------------------------------------------------
 
 alias e="exit"
+alias r=". /home/vagrant/.bashrc"
+alias g="git"
 
 
 
