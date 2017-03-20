@@ -11,6 +11,9 @@ export AWS_DEFAULT_REGION=
 export AWS_PREFIX=
 ```
 
+e.g. on OS X, these can be stored in the host user's ~/.bash_profile.
+
+
 Then execute:
 
 
