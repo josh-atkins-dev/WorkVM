@@ -3,7 +3,7 @@
 
 Vagrant.configure(2) do |config|
 
-  config.vm.box = "debian/jessie64"
+  config.vm.box = "debian/contrib-jessie64"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -23,7 +23,6 @@ Vagrant.configure(2) do |config|
   # Bridged networks make the machine appear as another physical device on
   # your network.
   # config.vm.network "public_network"
-
   config.vm.synced_folder "./", "/vagrant"
 
   # Provider-specific configuration so you can fine-tune various
