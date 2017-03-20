@@ -9,14 +9,17 @@ CREDENTIALS=(
 "AWS_PREFIX" "${AWS_PREFIX}"
 )
 
+if ! $(grep -q ". /home/vagrant/.credentials" "/home/vagrant/.profile"); then
+  echo ". /home/vagrant/.credentials" >> "/home/vagrant/.profile"
+fi
 
+echo "" > /home/vagrant/.credentials
 for (( i=0; i<=$(( ${#CREDENTIALS[@]}-1 )); i=i+2 ))
 do
-
-  if ! $(grep -q "export ${CREDENTIALS[$i]}=" "/home/vagrant/.profile"); then
-    echo "export ${CREDENTIALS[$i]}=\"${CREDENTIALS[$i+1]}\"" >> /home/vagrant/.profile
-  fi
+  echo "export ${CREDENTIALS[$i]}=\"${CREDENTIALS[$i+1]}\"" >> /home/vagrant/.credentials
 done
+
+
 
 
 
