@@ -30,3 +30,10 @@ pip install boto virtualenv awscli
 
 bashrc=$(cat /home/vagrant/.bashrc)
 grep -q -F '. /vagrant/vagrant.bashrc' /home/vagrant/.bashrc || echo -en "$bashrc\n. /vagrant/vagrant.bashrc" >>/home/vagrant/.bashrc
+
+
+the_ppa=http://ppa.launchpad.net/ansible/ansible/ubuntu
+
+if ! grep -q "^deb .*$the_ppa" /etc/apt/sources.list /etc/apt/sources.list.d/*; then
+    echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main" >> /etc/apt/sources.list
+fi
