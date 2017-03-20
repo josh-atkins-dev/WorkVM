@@ -1,7 +1,7 @@
 # WorkVM
 Personal virtual machine providing a consistent development environment on any underlying host environment that supports vagrant.
 ## Getting Started
-Set the following variables on your host machine on the first `vagrant up` any provision:
+Set the following variables on your host machine on the first `vagrant up` or any provision:
 
 ```
 export aws_access_key_id=
