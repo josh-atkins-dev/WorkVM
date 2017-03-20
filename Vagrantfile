@@ -12,5 +12,8 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision :shell, path: "vagrant-bootstrap.sh"
-  
+
+  if Vagrant.has_plugin?("vagrant-cachier")
+    config.cache.scope = :box
+  end
 end
