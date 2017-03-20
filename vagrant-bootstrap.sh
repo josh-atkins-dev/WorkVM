@@ -1,20 +1,18 @@
 #!/bin/bash
 
+echo "Installing Ansible..."
 
 the_ppa=http://ppa.launchpad.net/ansible/ansible/ubuntu
 
 if ! grep -q "^deb .*$the_ppa" /etc/apt/sources.list /etc/apt/sources.list.d/*; then
     echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main" >> /etc/apt/sources.list
 fi
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 
-apt-get install -y fortune git ntp software-properties-common
-apt-get update
+apt-get install -y fortune ansible git ntp software-properties-common 
 
-echo "Installing Ansible..."
-apt-get install -y ansible 
 
 ansible-galaxy install kbrebanov.openvpn
-# ansible-galaxy install angstwad.docker_ubuntu
 
 
 echo "Installing Docker..."
