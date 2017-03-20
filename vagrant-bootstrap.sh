@@ -7,5 +7,8 @@ apt-get update
 echo "Installing Ansible..."
 apt-get install -y ansible
 
+ansible-galaxy install kbrebanov.openvpn
+ansible-galaxy install angstwad.docker_ubuntu
+
 bashrc=$(cat /home/vagrant/.bashrc)
 grep -q -F '. /vagrant/vagrant.bashrc' /home/vagrant/.bashrc || echo -en "$bashrc\n. /vagrant/vagrant.bashrc" >>/home/vagrant/.bashrc
