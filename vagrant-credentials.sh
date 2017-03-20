@@ -1,13 +1,7 @@
 echo "Credentials..."
 
 
-CREDENTIALS=(
-"aws_access_key_id"
-"aws_secret_access_key"
-"ANSIBLE_CONFIG"
-"AWS_DEFAULT_REGION"
-"AWS_PREFIX"
-)
+CREDENTIALS=($vagrant_credential_vars)
 
 if ! $(grep -q ". /home/vagrant/.credentials" "/home/vagrant/.profile"); then
   echo ". /home/vagrant/.credentials" >> "/home/vagrant/.profile"
