@@ -28,6 +28,8 @@ alias gk="git checkout"
 alias gb="git branch"
 
 
+export PUBLIC_IP=$(wget -qO- http://ipecho.net/plain ; echo)
+
 
 #-------------------------------------------------------------
 # Source global definitions (if any)
@@ -89,11 +91,14 @@ ALERT=${BWhite}${On_Red} # Bold White on red background
 
 
 
-echo -e "${BCyan}This is BASH ${BRed}${BASH_VERSION%.*}${NC}\n"
+echo -e "${BCyan}This is BASH ${BRed}${BASH_VERSION%.*}${NC}\n${BCyan}Public IP: ${BRed}${PUBLIC_IP}${NC}\n"
 date
+
+echo -e "\n"
 if [ -x /usr/games/fortune ]; then
     /usr/games/fortune -s     # Makes our day a bit more fun.... :-)
 fi
+echo -e "\n"
 
 function _exit()              # Function to run upon exit of shell.
 {
