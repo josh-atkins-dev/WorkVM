@@ -14,8 +14,11 @@ Vagrant.configure(2) do |config|
 
   config.vm.define :dev do |dev|
 
+    dev.vm.network "private_network", ip: "10.100.103.120"
+    config.vm.network "forwarded_port", guest: 8080, host: 8080
+
     config.vm.provision :shell, path: "vagrant-bootstrap.sh"
-    
+
   end
 
 
