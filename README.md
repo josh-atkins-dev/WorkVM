@@ -7,3 +7,4 @@ Personal virtual machine providing a consistent development environment on any u
 ```
 ## Prerequisites
 - VirtualBox version 5.1.18 (`VBoxManage --version`)
+- Vagrant version 1.9.2 (`vagrant --version`)
