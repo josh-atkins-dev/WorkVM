@@ -23,7 +23,7 @@ Vagrant.configure(2) do |config|
     dev.vm.provision "credentials", type: "shell" do |s|
       s.path = "vagrant-credentials.sh"
       s.env = {
-        "vagrant_credential_vars" => "AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY ANSIBLE_CONFIG AWS_DEFAULT_REGION AWS_PREFIX VM_TEMP_PATH VPC_CIDR PRIVATE_DNS_NAME",
+        "vagrant_credential_vars" => "AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY ANSIBLE_CONFIG AWS_DEFAULT_REGION AWS_PREFIX VM_TEMP_PATH VPC_CIDR VPC_OCTET_1 VPC_OCTET_2 PRIVATE_DNS_NAME AZ1 AZ2 VPN_SUBNET_CIDR EC2_KEY_NAME", 
         "AWS_ACCESS_KEY_ID" => ENV['AWS_ACCESS_KEY_ID'],
         "AWS_SECRET_ACCESS_KEY" => ENV['AWS_SECRET_ACCESS_KEY'],
         "ANSIBLE_CONFIG" => "/vagrant/ansible.cfg",
@@ -31,7 +31,13 @@ Vagrant.configure(2) do |config|
         "AWS_PREFIX" => ENV['AWS_PREFIX'],
         "VM_TEMP_PATH" => '/vagrant/tmp',
         "VPC_CIDR" => '10.2.0.0/16',
-        "PRIVATE_DNS_NAME" => "private-zone.vpc"
+        "VPC_OCTET_1" => "10",
+        "VPC_OCTET_2" => "2",
+        "PRIVATE_DNS_NAME" => "private-zone.vpc",
+        "AZ1" => "eu-central-1a",
+        "AZ2" => "eu-central-1b",
+        "VPN_SUBNET_CIDR" => "10.8.0.0/24",
+        "EC2_KEY_NAME" => ENV['AWS_PREFIX'] + "-key"
       }
     end
 

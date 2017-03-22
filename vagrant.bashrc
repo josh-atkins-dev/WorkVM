@@ -29,8 +29,12 @@ alias gk="git checkout"
 alias gb="git branch"
 
 
-export PUBLIC_IP=$(wget -qO- http://ipecho.net/plain ; echo)
 
+
+function update_public_ip () {
+    export PUBLIC_IP=$(wget -qO- http://ipecho.net/plain ; echo)    
+}
+update_public_ip
 
 #-------------------------------------------------------------
 # Source global definitions (if any)
