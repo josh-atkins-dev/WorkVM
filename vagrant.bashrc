@@ -33,7 +33,7 @@ alias gb="git branch"
 
 
 function update_public_ip () {
-    export PUBLIC_IP=$(wget -qO- -t 1 --timeout 1 http://ipecho.net/plain ; echo)    
+    export PUBLIC_IP=$(wget -qO- -t 1 --timeout 5 http://ipecho.net/plain ; echo)    
 }
 update_public_ip
 
