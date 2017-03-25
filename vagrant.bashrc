@@ -4,6 +4,8 @@
 [ -z "$PS1" ] && return
 
 export TERM=xterm
+export ANSIBLE_ROLES_PATH="${VM_TEMP_PATH}/roles"
+
 
 cd /vagrant
 #-------------------------------------------------------------
@@ -32,7 +34,7 @@ alias gb="git branch"
 
 
 function update_public_ip () {
-    export PUBLIC_IP=$(wget -qO- http://ipecho.net/plain ; echo)    
+    export PUBLIC_IP=$(wget -qO- -t 1 --timeout 1 http://ipecho.net/plain ; echo)    
 }
 update_public_ip
 
