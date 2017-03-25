@@ -4,7 +4,6 @@
 [ -z "$PS1" ] && return
 
 export TERM=xterm
-export ANSIBLE_ROLES_PATH="${VM_TEMP_PATH}/roles"
 
 
 cd /vagrant

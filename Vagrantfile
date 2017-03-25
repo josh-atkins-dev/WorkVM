@@ -23,13 +23,14 @@ Vagrant.configure(2) do |config|
     dev.vm.provision "credentials", type: "shell" do |s|
       s.path = "vagrant-credentials.sh"
       s.env = {
-        "vagrant_credential_vars" => "AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY ANSIBLE_CONFIG AWS_DEFAULT_REGION AWS_PREFIX VM_TEMP_PATH VPC_CIDR VPC_OCTET_1 VPC_OCTET_2 PRIVATE_DNS_NAME AZ1 AZ2 VPN_SUBNET_CIDR EC2_KEY_NAME GITHUB_TOKEN GITHUB_USER", 
+        "vagrant_credential_vars" => "AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY ANSIBLE_CONFIG AWS_DEFAULT_REGION AWS_PREFIX VM_TEMP_PATH ANSIBLE_ROLES_PATH VPC_CIDR VPC_OCTET_1 VPC_OCTET_2 PRIVATE_DNS_NAME AZ1 AZ2 VPN_SUBNET_CIDR EC2_KEY_NAME GITHUB_TOKEN GITHUB_USER", 
         "AWS_ACCESS_KEY_ID" => ENV['AWS_ACCESS_KEY_ID'],
         "AWS_SECRET_ACCESS_KEY" => ENV['AWS_SECRET_ACCESS_KEY'],
         "ANSIBLE_CONFIG" => "/vagrant/ansible.cfg",
         "AWS_DEFAULT_REGION" => ENV['AWS_DEFAULT_REGION'],
         "AWS_PREFIX" => ENV['AWS_PREFIX'],
         "VM_TEMP_PATH" => '/vagrant/tmp',
+        "ANSIBLE_ROLES_PATH" => '$VM_TEMP_PATH/roles',
         "VPC_CIDR" => '10.2.0.0/16',
         "VPC_OCTET_1" => "10",
         "VPC_OCTET_2" => "2",
