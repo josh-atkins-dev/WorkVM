@@ -15,6 +15,11 @@ alias gv="git log --graph --decorate --oneline --all"
 alias gk="git checkout"
 alias gb="git branch"
 
+alias v="vagrant status"
+alias vd="vagrant destroy"
+alias vu="vagrant up"
+alias vs="vagrant ssh"
+
 
 
 #-------------------------------------------------------------
