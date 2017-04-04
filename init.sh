@@ -19,6 +19,7 @@ alias v="vagrant status"
 alias vd="vagrant destroy"
 alias vu="vagrant up"
 alias vs="vagrant ssh"
+alias vp="vagrant provision --provision-with 'credentials'"
 
 
 
