@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+echo "Installing utilities..."
+apt-get install -y fortune git ntp software-properties-common 
+
+
+
 echo "Installing Ansible..."
 
 the_ppa=http://ppa.launchpad.net/ansible/ansible/ubuntu
@@ -7,9 +12,10 @@ the_ppa=http://ppa.launchpad.net/ansible/ansible/ubuntu
 if ! grep -q "^deb .*$the_ppa" /etc/apt/sources.list /etc/apt/sources.list.d/*; then
     echo "deb ${the_ppa} trusty main" >> /etc/apt/sources.list
 fi
+
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 
-apt-get install -y fortune ansible git ntp software-properties-common 
+apt-get install -y ansible
 
 
 echo "Installing Docker..."
