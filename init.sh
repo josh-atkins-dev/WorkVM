@@ -1,3 +1,9 @@
+
+if [ ${VM_GUEST} ]; then
+    echo "not executing: do not run on guest!"
+    return
+fi
+
 export TERM=xterm  
 
 alias e="exit"

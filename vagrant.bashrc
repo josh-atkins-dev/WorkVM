@@ -5,6 +5,8 @@
 
 export TERM=xterm
 
+export VM_GUEST=true
+
 
 cd /vagrant
 #-------------------------------------------------------------
