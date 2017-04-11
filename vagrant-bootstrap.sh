@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export
+
 echo "Prepare for installing Ansible..."
 
 the_ppa=http://ppa.launchpad.net/ansible/ansible/ubuntu
@@ -42,6 +44,11 @@ echo "Install pip packages..."
 pip install boto virtualenv awscli
 
 
-echo "Configigure ~/.bashrc"
+echo "Configigure ~/.bashrc..."
 bashrc=$(cat /home/vagrant/.bashrc)
 grep -q -F '. /vagrant/vagrant.bashrc' /home/vagrant/.bashrc || echo -en "$bashrc\n. /vagrant/vagrant.bashrc" >>/home/vagrant/.bashrc
+
+
+
+echo "Create projects dir..."
+mkdir -p /vagrant/projects
