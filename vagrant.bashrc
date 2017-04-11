@@ -16,7 +16,7 @@ alias r=". /home/vagrant/.bashrc"
 alias pf="pip freeze"
 alias fixtime="sudo service ntp stop; sudo ntpd -gq; sudo service ntp start"
 alias i=". init.sh"
-alias ls="/bin/ls --group-directories-first --color=auto "
+alias ls="/bin/ls --group-directories-first --color=always "
 
 
 alias g="git status"
