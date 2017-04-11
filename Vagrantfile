@@ -58,7 +58,7 @@ Vagrant.configure(2) do |config|
     dev.vm.network "private_network", ip: "10.100.103.120"
     dev.vm.network "forwarded_port", guest: 8080, host: 8080
 
-    # dev.vm.provision "shell", path: "vagrant-bootstrap.sh"
+    dev.vm.provision "shell", path: "vagrant-bootstrap.sh"
 
     dev.vm.provision "credentials", type: "shell" do |s|
         s.inline = set_guest_vars_script
