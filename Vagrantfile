@@ -14,7 +14,26 @@ echo "... add env vars to /home/vagrant/.credentials"
 
 cat << EOF > /home/vagrant/.credentials
 
-export FOO=123
+export AWS_ACCESS_KEY_ID=#{ENV['AWS_ACCESS_KEY_ID']}
+export AWS_SECRET_ACCESS_KEY=#{ENV['AWS_SECRET_ACCESS_KEY']}
+export ANSIBLE_CONFIG="/vagrant/ansible.cfg"
+export AWS_DEFAULT_REGION=#{ENV['AWS_DEFAULT_REGION']}
+export AWS_PREFIX=#{ENV['AWS_PREFIX']}
+export VM_TEMP_PATH='/vagrant/tmp'
+export ANSIBLE_ROLES_PATH='$VM_TEMP_PATH/roles'
+export VPC_CIDR='10.2.0.0/16'
+export VPC_OCTET_1="10"
+export VPC_OCTET_2="2"
+export PRIVATE_DNS_NAME="private-zone.vpc"
+export AZ1="eu-central-1a"
+export AZ2="eu-central-1b"
+export VPN_SUBNET_CIDR="10.8.0.0/24"
+export EC2_KEY_NAME=${AWS_PREFIX}-key
+export S3_BUCKET=${AWS_PREFIX}-data
+export GITHUB_TOKEN=#{ENV['GITHUB_TOKEN']}
+export GITHUB_USER=#{ENV['GITHUB_USER']}
+export ANSIBLE_PRIVATE_KEY_FILE="$VM_TEMP_PATH/ssh/$EC2_KEY_NAME.pem"
+export VPC_DOMAIN="bringhim.coffee"
 
 EOF
 
