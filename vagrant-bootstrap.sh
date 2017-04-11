@@ -12,9 +12,6 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 apt-get install -y fortune ansible git ntp software-properties-common 
 
 
-ansible-galaxy install kbrebanov.openvpn
-
-
 echo "Installing Docker..."
 apt-get install -y apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
