@@ -4,7 +4,21 @@
 
 set_guest_vars_script = <<CREDENTIALS
 
-export
+
+if ! $(grep -q ". /home/vagrant/.credentials" "/home/vagrant/.profile"); then
+  echo "... source ~/.credentials from ~/.profile"
+  echo ". /home/vagrant/.credentials" >> "/home/vagrant/.profile"
+fi
+
+echo "... add env vars to /home/vagrant/.credentials"
+
+cat << EOF > /home/vagrant/.credentials
+
+export FOO=123
+
+EOF
+
+
 
 CREDENTIALS
 
