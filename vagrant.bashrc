@@ -14,6 +14,7 @@ cd /vagrant
 #-------------------------------------------------------------
 
 alias e="exit"
+alias c="clear"
 alias r=". /home/vagrant/.bashrc"
 alias pf="pip freeze"
 alias fixtime="sudo service ntp stop; sudo ntpd -gq; sudo service ntp start"
