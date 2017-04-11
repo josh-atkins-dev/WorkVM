@@ -33,6 +33,7 @@ alias gb="git branch"
 
 git config --global user.name "${GITHUB_NAME}"
 git config --global user.email "${GITHUB_EMAIL}"
+git config --global push.default simple
 
 
 function update_public_ip () {
