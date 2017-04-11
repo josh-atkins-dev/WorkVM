@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Installing utilities..."
-apt-get install -y fortune git ntp software-properties-common 
-
-
-
-echo "Installing Ansible..."
+echo "Prepare for installing Ansible..."
 
 the_ppa=http://ppa.launchpad.net/ansible/ansible/ubuntu
 
@@ -15,10 +10,8 @@ fi
 
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 
-apt-get install -y ansible
 
-
-echo "Installing Docker..."
+echo "Prepare for installing Docker..."
 apt-get install -y apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 apt-key fingerprint | grep "4096R/F273FCD8 2017-02-22" || exit
@@ -26,14 +19,29 @@ add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/debian \
    $(lsb_release -cs) \
    stable"
+
+
+echo "Update apt-get..."
 apt-get update
-apt-get install -y docker-ce
+
+
+echo "Install packages..."
+apt-get install -y fortune git ntp software-properties-common ansible docker-ce
+
+
+echo "Configure docker..."
 groupadd docker
 usermod -aG docker vagrant
 systemctl enable docker
 
+
+echo "Install pip..."
 wget -O - https://bootstrap.pypa.io/get-pip.py | python
+
+echo "Install pip packages..."
 pip install boto virtualenv awscli
 
+
+echo "Configigure ~/.bashrc"
 bashrc=$(cat /home/vagrant/.bashrc)
 grep -q -F '. /vagrant/vagrant.bashrc' /home/vagrant/.bashrc || echo -en "$bashrc\n. /vagrant/vagrant.bashrc" >>/home/vagrant/.bashrc
