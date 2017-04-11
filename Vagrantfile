@@ -6,8 +6,8 @@ set_guest_vars_script = <<CREDENTIALS
 
 
 if ! $(grep -q ". /home/vagrant/.credentials" "/home/vagrant/.profile"); then
-  echo "... source ~/.credentials from ~/.profile"
-  echo ". /home/vagrant/.credentials" >> "/home/vagrant/.profile"
+  echo "... prepend sourcing ~/.credentials from ~/.profile"
+  echo -e ". /home/vagrant/.credentials\n$(cat /home/vagrant/.profile)">/home/vagrant/.profile
 fi
 
 echo "... add env vars to /home/vagrant/.credentials"
@@ -16,6 +16,8 @@ cat << EOF > /home/vagrant/.credentials
 
 export GITHUB_TOKEN=#{ENV['GITHUB_TOKEN']}
 export GITHUB_USER=#{ENV['GITHUB_USER']}
+export GITHUB_NAME="#{ENV['GITHUB_NAME']}"
+export GITHUB_EMAIL=#{ENV['GITHUB_EMAIL']}
 
 export AWS_PREFIX=#{ENV['AWS_PREFIX']}
 
@@ -41,7 +43,6 @@ export VM_TEMP_PATH='/vagrant/tmp'
 export ANSIBLE_CONFIG="/vagrant/ansible.cfg"
 export ANSIBLE_ROLES_PATH='$VM_TEMP_PATH/roles'
 export ANSIBLE_PRIVATE_KEY_FILE="$VM_TEMP_PATH/ssh/$EC2_KEY_NAME.pem"
-
 
 EOF
 

@@ -31,6 +31,8 @@ alias gk="git checkout"
 alias gb="git branch"
 
 
+git config --global user.name "${GITHUB_NAME}"
+git config --global user.email "${GITHUB_EMAIL}"
 
 
 function update_public_ip () {
