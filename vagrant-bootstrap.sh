@@ -5,7 +5,7 @@ echo "Installing Ansible..."
 the_ppa=http://ppa.launchpad.net/ansible/ansible/ubuntu
 
 if ! grep -q "^deb .*$the_ppa" /etc/apt/sources.list /etc/apt/sources.list.d/*; then
-    echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main" >> /etc/apt/sources.list
+    echo "deb ${the_ppa} trusty main" >> /etc/apt/sources.list
 fi
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 
