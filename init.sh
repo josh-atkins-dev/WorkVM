@@ -22,6 +22,7 @@ alias gv="git log --graph --decorate --oneline --all"
 alias gk="git checkout"
 alias gb="git branch"
 alias gsu="git submodule update --remote --merge"
+alias gp="git push --recurse-submodules=check"
 
 alias v="vagrant status"
 alias vd="vagrant destroy"
