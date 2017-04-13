@@ -8,6 +8,7 @@ export TERM=xterm
 
 alias e="exit"
 alias i=". init.sh"
+alias s="subl"
 
 
 alias g="git status"
