@@ -27,6 +27,8 @@ export AWS_DEFAULT_REGION=#{ENV['AWS_DEFAULT_REGION']}
 export AZ1="eu-central-1a"
 export AZ2="eu-central-1b"
 
+export AWS_BUCKET_NAME=${AWS_PREFIX}-bucket
+
 export VPC_CIDR='10.2.0.0/16'
 export VPC_OCTET_1="10"
 export VPC_OCTET_2="2"
@@ -34,7 +36,6 @@ export VPC_DOMAIN="bringhim.coffee"
 export PRIVATE_DNS_NAME="private-zone.vpc"
 
 export EC2_KEY_NAME=${AWS_PREFIX}-key
-export S3_BUCKET=${AWS_PREFIX}-data
 
 export VPN_SUBNET_CIDR="10.8.0.0/24"
 
