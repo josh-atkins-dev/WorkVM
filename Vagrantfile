@@ -27,7 +27,7 @@ export AWS_DEFAULT_REGION=#{ENV['AWS_DEFAULT_REGION']}
 export AZ1="eu-central-1a"
 export AZ2="eu-central-1b"
 
-export AWS_BUCKET_NAME=${AWS_PREFIX}-bucket
+export AWS_BUCKET_NAME=#{ENV['AWS_PREFIX']}-bucket
 
 export VPC_CIDR='10.2.0.0/16'
 export VPC_OCTET_1="10"
