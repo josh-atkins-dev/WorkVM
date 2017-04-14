@@ -30,9 +30,13 @@ export AZ2="eu-central-1b"
 export AWS_BUCKET_NAME=#{ENV['AWS_PREFIX']}-bucket
 
 export VPC_CIDR='10.2.0.0/16'
+export VPC_NAME='#{ENV['AWS_PREFIX']}-vpc'
 export VPC_OCTET_1="10"
 export VPC_OCTET_2="2"
 export VPC_DOMAIN="bringhim.coffee"
+
+export SUBNET_SPECS='[{"cidr":"10.2.0.0/24","az":"eu-central-1a","name":"public_subnet_1"},{"cidr":"10.2.1.0/24","az":"eu-central-1b","name":"public_subnet_2"},{"cidr":"10.2.2.0/24","az":"eu-central-1a","name":"private_subnet_1"},{"cidr":"10.2.3.0/24","az":"eu-central-1b","name":"private_subnet_2"}]'
+
 export PRIVATE_DNS_NAME="private-zone.vpc"
 
 export EC2_KEY_NAME=#{ENV['AWS_PREFIX']}-key
