@@ -46,7 +46,7 @@ export VPN_SUBNET_CIDR="10.8.0.0/24"
 export VM_TEMP_PATH='/vagrant/tmp'
 
 export ANSIBLE_CONFIG="/vagrant/ansible.cfg"
-export ANSIBLE_ROLES_PATH='$VM_TEMP_PATH/roles'
+export ANSIBLE_ROLES_PATH='/vagrant/tmp/roles'
 export ANSIBLE_PRIVATE_KEY_FILE="/vagrant/tmp/ssh/#{ENV['AWS_PREFIX']}-key.pem"
 
 EOF
