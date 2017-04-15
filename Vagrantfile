@@ -35,7 +35,7 @@ export VPC_OCTET_1="10"
 export VPC_OCTET_2="2"
 export VPC_DOMAIN="bringhim.coffee"
 
-export SUBNET_SPECS='[{"cidr":"10.2.0.0/24","az":"eu-central-1a","name":"public_subnet_1"},{"cidr":"10.2.1.0/24","az":"eu-central-1b","name":"public_subnet_2"},{"cidr":"10.2.2.0/24","az":"eu-central-1a","name":"private_subnet_1"},{"cidr":"10.2.3.0/24","az":"eu-central-1b","name":"private_subnet_2"}]'
+export SUBNET_SPECS='[{"cidr":"10.2.0.0/24","az":"eu-central-1a","name":"public_subnet_1"},{"cidr":"10.2.1.0/24","az":"eu-central-1b","name":"public_subnet_2"},{"cidr":"10.2.2.0/24","az":"eu-central-1a","name":"private_subnet_1"},{"cidr":"10.2.3.0/24","az":"eu-central-1b","name":"private_subnet_2"},{"cidr":"10.2.4.0/24","az":"eu-central-1a","name":"private_subnet_3"},{"cidr":"10.2.5.0/24","az":"eu-central-1b","name":"private_subnet_4"},{"cidr":"10.2.6.0/24","az":"eu-central-1b","name":"private_subnet_5"}]'
 
 export PRIVATE_DNS_NAME="private-zone.vpc"
 
