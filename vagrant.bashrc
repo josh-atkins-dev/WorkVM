@@ -223,7 +223,7 @@ function disk_color()
         elif [ ${used} -gt 90 ]; then
             echo -en ${BRed}            # Free disk space almost gone.
         else
-            echo -en ${Green}           # Free disk space is ok.
+            echo -en ${Purple}           # Free disk space is ok.
         fi
     else
         echo -en ${Cyan}
