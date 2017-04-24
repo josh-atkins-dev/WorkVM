@@ -50,6 +50,7 @@ export VM_TEMP_PATH='/vagrant/tmp'
 
 export ANSIBLE_CONFIG="/vagrant/ansible.cfg"
 export ANSIBLE_ROLES_PATH='/vagrant/tmp/roles'
+export ANSIBLE_LIBRARY='/vagrant/tmp/ansible_library'
 export ANSIBLE_PRIVATE_KEY_FILE="/vagrant/tmp/ssh/#{ENV['AWS_PREFIX']}-key.pem"
 
 EOF
