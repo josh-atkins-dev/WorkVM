@@ -41,6 +41,8 @@ export PRIVATE_DNS_NAME="private-zone.vpc"
 
 export EC2_KEY_NAME=#{ENV['AWS_PREFIX']}-key
 
+export ELASTICSEARCH_DOMAIN=es-cluster
+
 export RDS_MASTER_USERNAME=#{ENV['RDS_MASTER_USERNAME']}
 export RDS_MASTER_PASSWORD=#{ENV['RDS_MASTER_PASSWORD']}
 
