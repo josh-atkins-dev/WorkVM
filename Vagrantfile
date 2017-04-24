@@ -41,6 +41,9 @@ export PRIVATE_DNS_NAME="private-zone.vpc"
 
 export EC2_KEY_NAME=#{ENV['AWS_PREFIX']}-key
 
+export RDS_MASTER_USERNAME=#{ENV['RDS_MASTER_USERNAME']}
+export RDS_MASTER_PASSWORD=#{ENV['RDS_MASTER_PASSWORD']}
+
 export VPN_SUBNET_CIDR="10.8.0.0/24"
 
 export VM_TEMP_PATH='/vagrant/tmp'
