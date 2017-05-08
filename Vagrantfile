@@ -24,8 +24,9 @@ export AWS_PREFIX=#{ENV['AWS_PREFIX']}
 export AWS_ACCESS_KEY_ID=#{ENV['AWS_ACCESS_KEY_ID']}
 export AWS_SECRET_ACCESS_KEY=#{ENV['AWS_SECRET_ACCESS_KEY']}
 export AWS_DEFAULT_REGION=#{ENV['AWS_DEFAULT_REGION']}
-export AZ1="eu-central-1a"
-export AZ2="eu-central-1b"
+export AZ1=#{ENV['AZ1']}
+export AZ2=#{ENV['AZ2']}
+export AZ3=#{ENV['AZ3']}
 
 export AWS_BUCKET_NAME=#{ENV['AWS_PREFIX']}-bucket
 
@@ -45,8 +46,6 @@ export ELASTICSEARCH_DOMAIN=es-cluster
 
 export RDS_MASTER_USERNAME=#{ENV['RDS_MASTER_USERNAME']}
 export RDS_MASTER_PASSWORD=#{ENV['RDS_MASTER_PASSWORD']}
-
-export VPN_SUBNET_CIDR="10.8.0.0/24"
 
 export VM_TEMP_PATH='/vagrant/tmp'
 
