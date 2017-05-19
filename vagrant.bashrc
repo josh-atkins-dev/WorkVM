@@ -7,6 +7,8 @@ export TERM=xterm
 
 export VM_GUEST=true
 
+export PATH="/home/$USER/bin:$PATH"
+
 
 cd /vagrant
 #-------------------------------------------------------------
