@@ -44,7 +44,7 @@ echo "Install pip packages..."
 pip install boto boto3 virtualenv awscli
 
 
-echo "Configigure ~/.bashrc..."
+echo "Configure ~/.bashrc..."
 bashrc=$(cat /home/vagrant/.bashrc)
 grep -q -F '. /vagrant/vagrant.bashrc' /home/vagrant/.bashrc || echo -en "$bashrc\n. /vagrant/vagrant.bashrc" >>/home/vagrant/.bashrc
 
@@ -52,3 +52,6 @@ grep -q -F '. /vagrant/vagrant.bashrc' /home/vagrant/.bashrc || echo -en "$bashr
 
 echo "Create projects dir..."
 mkdir -p /vagrant/projects
+
+echo "Create ~/bin..."
+mkdir -p /home/vagrant/bin
