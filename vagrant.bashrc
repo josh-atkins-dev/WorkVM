@@ -9,9 +9,6 @@ export VM_GUEST=true
 
 export PATH="/home/$USER/bin:$PATH"
 
-mkdir -p /home/$USER/bin
-chown $USER:$USER /home/vagrant/bin
-
 
 cd /vagrant
 #-------------------------------------------------------------

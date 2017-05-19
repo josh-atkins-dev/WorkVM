@@ -55,3 +55,4 @@ mkdir -p /vagrant/projects
 
 echo "Create ~/bin..."
 mkdir -p /home/vagrant/bin
+chown vagrant:vagrant /home/vagrant/bin
