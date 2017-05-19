@@ -40,7 +40,7 @@ export SUBNET_SPECS='[{"cidr":"10.2.0.0/24","az":"eu-central-1a","name":"public_
 
 export PRIVATE_DNS_NAME="private-zone.vpc"
 
-export EC2_KEY_NAME=#{ENV['AWS_PREFIX']}-key
+export EC2_KEY_NAME=#{ENV['EC2_KEY_NAME']}
 
 export ELASTICSEARCH_DOMAIN=es-cluster
 
