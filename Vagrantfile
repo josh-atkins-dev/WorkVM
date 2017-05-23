@@ -55,6 +55,10 @@ export ANSIBLE_ROLES_PATH='/vagrant/tmp/roles'
 export ANSIBLE_LIBRARY='/vagrant/tmp/ansible_library'
 export ANSIBLE_PRIVATE_KEY_FILE="/vagrant/tmp/ssh/#{ENV['AWS_PREFIX']}-key.pem"
 
+export PG_DB_NAME=#{ENV['PG_DB_NAME']}
+export PG_USER=#{ENV['PG_USER']}
+export PG_PASS=#{ENV['PG_PASS']}
+
 EOF
 
 
