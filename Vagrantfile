@@ -59,6 +59,9 @@ export PG_DB_NAME=#{ENV['PG_DB_NAME']}
 export PG_USER=#{ENV['PG_USER']}
 export PG_PASS=#{ENV['PG_PASS']}
 
+export aws_default_vpc=#{ENV['aws_default_vpc']}
+export aws_default_subnet=#{ENV['aws_default_subnet']}
+
 EOF
 
 
