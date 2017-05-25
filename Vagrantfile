@@ -40,6 +40,17 @@ Vagrant.configure(2) do |config|
         "AZ3" => "#{ENV['AZ3']}",
 
         "VPC_CIDR" => "#{ENV['VPC_CIDR']}",
+        "VPC_SUBNET_CIDR_0" => "#{ENV['VPC_SUBNET_CIDR_0']}",
+        "VPC_SUBNET_CIDR_1" => "#{ENV['VPC_SUBNET_CIDR_1']}",
+        "VPC_SUBNET_CIDR_2" => "#{ENV['VPC_SUBNET_CIDR_2']}",
+        "VPC_SUBNET_CIDR_3" => "#{ENV['VPC_SUBNET_CIDR_3']}",
+        "VPC_SUBNET_CIDR_4" => "#{ENV['VPC_SUBNET_CIDR_4']}",
+        "VPC_SUBNET_CIDR_5" => "#{ENV['VPC_SUBNET_CIDR_5']}",
+        "VPC_SUBNET_CIDR_6" => "#{ENV['VPC_SUBNET_CIDR_6']}",
+        "VPC_SUBNET_CIDR_7" => "#{ENV['VPC_SUBNET_CIDR_7']}",
+        "VPC_SUBNET_CIDR_8" => "#{ENV['VPC_SUBNET_CIDR_8']}",
+        "VPC_SUBNET_CIDR_9" => "#{ENV['VPC_SUBNET_CIDR_9']}",
+
         "VPC_PRIVATE_DOMAIN" => "#{ENV['VPC_PRIVATE_DOMAIN']}",
         "VPC_PUBLIC_DOMAIN" => "#{ENV['VPC_PUBLIC_DOMAIN']}",
 
