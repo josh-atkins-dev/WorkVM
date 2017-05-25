@@ -46,7 +46,7 @@ pip install boto boto3 virtualenv awscli
 
 echo "Configure ~/.bashrc..."
 bashrc=$(cat /home/vagrant/.bashrc)
-grep -q -F '. /vagrant/vagrant.bashrc' /home/vagrant/.bashrc || echo -en "$bashrc\n. /vagrant/vagrant.bashrc" >>/home/vagrant/.bashrc
+grep -q -F '. /vagrant/vagrant_conf/vagrant.bashrc' /home/vagrant/.bashrc || echo -en "$bashrc\n. /vagrant/vagrant_conf/vagrant.bashrc" >>/home/vagrant/.bashrc
 
 
 

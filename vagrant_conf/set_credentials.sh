@@ -10,7 +10,7 @@ echo "... add env vars to /home/vagrant/.credentials"
 cat << EOF > /home/vagrant/.credentials
 
 # VM 
-export VM_TEMP_PATH='/vagrant/tmp'
+export VM_TEMP_PATH="${VM_SYNCED_FOLDER}/tmp"
 
 # GIT
 export GITHUB_TOKEN="$GITHUB_TOKEN"
@@ -55,10 +55,9 @@ export PG_PASS="$PG_PASS"
 
 
 # ANSIBLE
-export ANSIBLE_CONFIG="/vagrant/ansible.cfg"
-export ANSIBLE_ROLES_PATH='/vagrant/tmp/roles'
-export ANSIBLE_LIBRARY='/vagrant/tmp/ansible_library'
-export ANSIBLE_PRIVATE_KEY_FILE="/vagrant/tmp/ssh/#{ENV['AWS_PREFIX']}-key.pem"
+export ANSIBLE_CONFIG="${VM_SYNCED_FOLDER}/vagrant_conf/ansible.cfg"
+export ANSIBLE_ROLES_PATH='${VM_SYNCED_FOLDER}/tmp/roles'
+export ANSIBLE_LIBRARY='${VM_SYNCED_FOLDER}/tmp/ansible_library'
 
 
 

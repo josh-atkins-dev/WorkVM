@@ -22,6 +22,8 @@ Vagrant.configure(2) do |config|
       type: "shell",
       path: "vagrant_conf/set_credentials.sh",
       env: {
+        "VM_SYNCED_FOLDER" => "/vagrant",
+
         "GITHUB_TOKEN" => "#{ENV['GITHUB_TOKEN']}",
         "GITHUB_USER" => "#{ENV['GITHUB_USER']}",
         "GITHUB_NAME" => "#{ENV['GITHUB_NAME']}",
@@ -45,13 +47,13 @@ Vagrant.configure(2) do |config|
 
         "RDS_MASTER_USERNAME" => "#{ENV['RDS_MASTER_USERNAME']}",
         "RDS_MASTER_PASSWORD" => "#{ENV['RDS_MASTER_PASSWORD']}",
-        
+
         "PG_DB_NAME" => "#{ENV['PG_DB_NAME']}",
         "PG_USER" => "#{ENV['PG_USER']}",
         "PG_PASS" => "#{ENV['PG_PASS']}"
       }
     
-    # dev.vm.provision "shell", path: "vagrant-bootstrap.sh"
+    dev.vm.provision "shell", path: "vagrant_conf/vagrant-bootstrap.sh"
 
     
 
