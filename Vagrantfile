@@ -61,7 +61,10 @@ Vagrant.configure(2) do |config|
 
         "PG_DB_NAME" => "#{ENV['PG_DB_NAME']}",
         "PG_USER" => "#{ENV['PG_USER']}",
-        "PG_PASS" => "#{ENV['PG_PASS']}"
+        "PG_PASS" => "#{ENV['PG_PASS']}",
+
+        "SFTP_USER" => "#{ENV['sftp_user']}",
+        "SFTP_PASS" => "#{ENV['sftp_password']}"
       }
     
     dev.vm.provision "shell", path: "vagrant_conf/vagrant-bootstrap.sh"

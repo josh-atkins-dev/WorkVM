@@ -70,6 +70,8 @@ export ANSIBLE_CONFIG="${VM_SYNCED_FOLDER}/vagrant_conf/ansible.cfg"
 export ANSIBLE_ROLES_PATH='${VM_SYNCED_FOLDER}/tmp/roles'
 export ANSIBLE_LIBRARY='${VM_SYNCED_FOLDER}/tmp/ansible_library'
 
+export SFTP_USER="${SFTP_USER}"
+export SFTP_PASS="${SFTP_PASS}"
 
 
 EOF
