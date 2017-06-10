@@ -72,6 +72,7 @@ export ANSIBLE_LIBRARY='${VM_SYNCED_FOLDER}/tmp/ansible_library'
 
 export SFTP_USER="${SFTP_USER}"
 export SFTP_PASS="${SFTP_PASS}"
+export SFTP_PASS_ENCRYPTED="${SFTP_PASS_ENCRYPTED}"
 
 
 EOF
