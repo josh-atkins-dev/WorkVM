@@ -1,4 +1,8 @@
 
+export
+
+echo "${SFTP_PASS_ENCRYPTED}"
+
 if ! $(grep -q ". /home/vagrant/.credentials" "/home/vagrant/.profile"); then
   echo "... source ~/.credentials from ~/.profile"
   echo -e ". /home/vagrant/.credentials\n$(cat /home/vagrant/.profile)">/home/vagrant/.profile
@@ -72,7 +76,7 @@ export ANSIBLE_LIBRARY='${VM_SYNCED_FOLDER}/tmp/ansible_library'
 
 export SFTP_USER="${SFTP_USER}"
 export SFTP_PASS="${SFTP_PASS}"
-export SFTP_PASS_ENCRYPTED="${SFTP_PASS_ENCRYPTED}"
+export SFTP_PASS_ENCRYPTED='${SFTP_PASS_ENCRYPTED}'
 
 
 EOF
