@@ -13,6 +13,11 @@ fi
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 
 
+
+echo "Update apt-get..."
+apt-get update
+
+
 echo "Prepare for installing Docker..."
 apt-get install -y apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
