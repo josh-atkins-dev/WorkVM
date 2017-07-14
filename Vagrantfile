@@ -65,7 +65,12 @@ Vagrant.configure(2) do |config|
 
         "SFTP_USER" => "#{ENV['sftp_user']}",
         "SFTP_PASS" => "#{ENV['sftp_password']}",
-        "SFTP_PASS_ENCRYPTED" => "#{ENV['sftp_password_encrypted']}"
+        "SFTP_PASS_ENCRYPTED" => "#{ENV['sftp_password_encrypted']}",
+
+        "JENKINS_AGENT_USER" => "#{ENV['jenkins_agent_user']}",
+        "JENKINS_AGENT_PASSWORD" => "#{ENV['jenkins_agent_password']}"
+
+
 
         
       }
