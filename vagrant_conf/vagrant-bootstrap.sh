@@ -46,7 +46,7 @@ echo "Install pip..."
 wget -O - https://bootstrap.pypa.io/get-pip.py | python
 
 echo "Install pip packages..."
-pip install boto boto3 virtualenv awscli docker-compose
+pip install boto boto3 virtualenv awscli docker-compose awscurl
 
 
 echo "Configure ~/.bashrc..."
